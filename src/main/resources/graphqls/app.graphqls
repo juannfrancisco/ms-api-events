@@ -1,0 +1,21 @@
+type Query {
+    talks: [Talk]
+    talk(id:Int!): Talk
+    speakers: [Speaker]
+    speaker(id:Int!): Speaker
+
+}
+
+type Talk {
+  id : ID
+  name: String
+  startTime: String
+  endTime: String
+  speaker: Speaker
+}
+
+type Speaker {
+  id : ID
+  name: String
+  bio: String
+}
