@@ -3,7 +3,11 @@ type Query {
     talk(id:Int!): Talk
     speakers: [Speaker]
     speaker(id:Int!): Speaker
+}
 
+type Mutation {
+  saveSpeaker(name: String!, bio: String!) : Speaker!
+  saveSpeakerInput( input:InputCreateSpeaker! ): Speaker!;
 }
 
 type Talk {
@@ -18,4 +22,10 @@ type Speaker {
   id : ID
   name: String
   bio: String
+}
+
+
+input InputCreateSpeaker {
+    name: String!
+    bio: String!
 }

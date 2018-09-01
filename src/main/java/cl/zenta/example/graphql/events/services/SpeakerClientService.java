@@ -16,9 +16,13 @@ public class SpeakerClientService {
 
 
     public Speaker findById(Integer id){
-        RestTemplate restTemplate = new RestTemplate();
-        Speaker obj = restTemplate.getForObject(api+"/"+ id, Speaker.class);
-        return obj;
+        try {
+            RestTemplate restTemplate = new RestTemplate();
+            Speaker obj = restTemplate.getForObject(api + "/" + id, Speaker.class);
+            return obj;
+        }catch (Exception ex){
+            return null;
+        }
     }
 
     public List<Speaker> findAll(){

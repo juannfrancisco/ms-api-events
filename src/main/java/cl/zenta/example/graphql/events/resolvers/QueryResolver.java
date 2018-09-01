@@ -2,6 +2,7 @@ package cl.zenta.example.graphql.events.resolvers;
 
 import cl.zenta.example.graphql.events.entities.Speaker;
 import cl.zenta.example.graphql.events.entities.Talk;
+import cl.zenta.example.graphql.events.exceptions.ObjectNotFoundException;
 import cl.zenta.example.graphql.events.services.SpeakerClientService;
 import cl.zenta.example.graphql.events.services.TalkClientService;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
@@ -24,7 +25,11 @@ public class QueryResolver implements GraphQLQueryResolver {
     }
 
     public Speaker speaker( Integer id ){
-        return speakerClientService.findById(id);
+        Speaker speaker = speakerClientService.findById(id);
+        if(null == speaker){
+            throw new ObjectNotFoundException("Speaker not found", id);
+        }
+        return speaker;
     }
 
 
@@ -34,6 +39,10 @@ public class QueryResolver implements GraphQLQueryResolver {
     }
 
     public Talk talk( Integer id ){
-        return talkClientService.findById(id);
+        Talk talk = talkClientService.findById(id);
+        if(null == talk){
+            throw new ObjectNotFoundException("Talk not found", id);
+        }
+        return talk;
     }
 }
