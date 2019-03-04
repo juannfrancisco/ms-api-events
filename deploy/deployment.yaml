@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ms-dal-talks
-        image: gcr.io/kubernetes-101-227215/ms-api-events:v1.0.0
+        image: gcr.io/kubernetes-101-227215/ms-api-events:latest
         ports:
         - name: api-events
           containerPort: 9093
