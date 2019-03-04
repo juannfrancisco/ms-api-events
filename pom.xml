@@ -6,7 +6,7 @@
 
     <groupId>cl.zenta.example.graphql</groupId>
     <artifactId>ms-api-events</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>v1.0.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -86,7 +86,7 @@
                 <version>0.9.9</version>
                 <configuration>
                     <to>
-                        <image>events/ms-api-events</image>
+                        <image>kubernetes-101-227215/ms-api-events</image>
                     </to>
                 </configuration>
             </plugin>

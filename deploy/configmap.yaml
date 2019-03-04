@@ -1,0 +1,10 @@
+## MASKING ENVIRONMENT
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ms-api-events-env
+  labels:
+    name: ms-api-events-env
+data:
+  API_SPEAKERS: 'http://ms-dal-speakers-svc:9091/speakers'
+  API_TALKS: 'http://ms-dal-talks-svc:9092/talks'

@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ms-api-events
+  labels:
+    app: ms-api-events
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-api-events
+  template:
+    metadata:
+      labels:
+        app: ms-api-events
+    spec:
+      containers:
+      - name: ms-dal-talks
+        image: gcr.io/kubernetes-101-227215/ms-api-events:v1.0.0
+        ports:
+        - name: api-events
+          containerPort: 9093
+          protocol: TCP

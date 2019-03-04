@@ -1,0 +1,16 @@
+## EXPOSE
+kind: Service
+apiVersion: v1
+metadata:
+  name: ms-api-events-svc
+spec:
+  selector:
+    app: ms-api-events
+  type: NodePort
+  ports:
+  #---------------------------------------- [CONTAINER PORT: srv-measurement]  -------------------------------#
+  - name: ms-api-events
+    protocol: TCP
+    nodePort: 30193
+    port: 9093
+    targetPort: 9093
