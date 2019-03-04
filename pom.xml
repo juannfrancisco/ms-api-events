@@ -86,7 +86,7 @@
                 <version>0.9.9</version>
                 <configuration>
                     <to>
-                        <image>kubernetes-101-227215/ms-api-events</image>
+                        <image>gcr.io/kubernetes-101-227215/ms-api-events</image>
                     </to>
                 </configuration>
             </plugin>
