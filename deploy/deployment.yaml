@@ -37,7 +37,7 @@ spec:
         args: [
           "-p", "8080",            # the port ESP listens on
           "-a", "127.0.0.1:9093",  # the backend address
-          "-s", "ms-api-events-svc",
+          "-s", "events-api.endpoints.kubernetes-101-227215.cloud.goog",
           "--rollout_strategy", "managed"
         ]
         ports:
