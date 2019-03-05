@@ -18,17 +18,17 @@ spec:
       - name: ms-dal-talks
         image: gcr.io/kubernetes-101-227215/ms-api-events:latest
         env:
-        - name: API_SPEAKERS
-          valueFrom:
-            configMapKeyRef:
-              name: ms-api-events-env
-              key: API_SPEAKERS
-
-        - name: API_TALKS
+          - name: API_SPEAKERS
             valueFrom:
               configMapKeyRef:
                 name: ms-api-events-env
-                key: API_TALKS
+                key: API_SPEAKERS
+
+          - name: API_TALKS
+              valueFrom:
+                configMapKeyRef:
+                  name: ms-api-events-env
+                  key: API_TALKS
         ports:
         - name: api-events
           containerPort: 9093
