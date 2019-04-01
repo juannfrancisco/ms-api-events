@@ -8,7 +8,7 @@ spec:
     app: ms-api-events
   type: LoadBalancer
   ports:
-  #---------------------------------------- [CONTAINER PORT: srv-measurement]  -------------------------------#
+  #---------------------------------------- [CONTAINER PORT: ]  -------------------------------#
   - name: ms-api-events
     protocol: TCP
     nodePort: 30193
